@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 //Normalize.css
-const EstilosGlobais = createGlobalStyle`
+const GlobalStyles = createGlobalStyle`
     html {
         line-height: 1.15;
         -webkit-text-size-adjust: 100%;
@@ -184,4 +184,4 @@ const EstilosGlobais = createGlobalStyle`
 
 `;
 
-export default EstilosGlobais
+export default GlobalStyles
