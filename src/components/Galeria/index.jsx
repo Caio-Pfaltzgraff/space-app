@@ -21,7 +21,7 @@ const ImageList = styled.ul`
     gap: 24px;
 `;
 
-const Galeria = ({ fotos = [] }) => {
+const Galeria = ({ fotos = [], aoFotoSelecionada }) => {
     return (
         <>
             <Tags />
@@ -29,7 +29,13 @@ const Galeria = ({ fotos = [] }) => {
                 <FluidSection>
                     <Title>Navegue pela galeria</Title>
                     <ImageList>
-                        {fotos.map(foto => <Imagem key={foto.id} foto={foto} />)}
+                        {fotos.map(foto => 
+                            <Imagem 
+                                aoZoomSolicitado={aoFotoSelecionada}
+                                key={foto.id} 
+                                foto={foto} 
+                            />)
+                        }
                     </ImageList>
                 </FluidSection>
                 <Populares />

@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import IconButton from "../../IconButton";
 
 const Card = styled.figure`
     width: ${props => props.$expandida ? '90%' : "400px"};
@@ -31,29 +32,22 @@ const Card = styled.figure`
             display: flex;
             justify-content: space-between;
             align-items: center;
-            button {
-                margin-left: 12px;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            }
         }
     }
 `;
 
-const Imagem = ({ foto, expandida = false }) => {
+const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
     return (
-        <Card $expandida={expandida}>
+        <Card $expandida={expandida} id={`foto-${foto.id}`}>
             <img src={foto.path} alt={foto.titulo} />
             <figcaption>
                 <h3>{foto.titulo}</h3>
                 <footer>
                     <h4>{foto.fonte}</h4>
-                    <button><img src="/icons/favorito.png" alt="Ícone de favorito" /></button>
-                    <button><img src="/icons/expandir.png" alt="Ícone de expandir" /></button>
+                    <IconButton><img src="/icons/favorito.png" alt="Icone de favorito" /></IconButton>
+                    {!expandida && <IconButton aria-hidden={expandida} onClick={() => aoZoomSolicitado(foto)}>
+                        <img src="/icons/expandir.png" alt="Icone de expandir" />
+                    </IconButton>}
                 </footer>
             </figcaption>
         </Card>
