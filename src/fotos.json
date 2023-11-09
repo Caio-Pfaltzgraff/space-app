@@ -4,69 +4,69 @@
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-1.png",
     "id": "1",
-    "tagId": 2
+    "tag": "Galáxias"
   },
   {
-    "titulo": "Via Láctea",
+    "titulo": "Nebulosa da Hélice",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-2.png",
     "id": "2",
-    "tagId": 2
+    "tag": "Nebulosas"
   },
   {
     "titulo": "Lua: quarto minguante",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-3.png",
     "id": "3",
-    "tagId": 3
+    "tag": "Luas"
   },
   {
     "titulo": "Galáxia de Andrómeda",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-4.png",
     "id": "4",
-    "tagId": 2
+    "tag": "Galáxias"
   },
   {
     "titulo": "Estrela Pistola",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-5.png",
     "id": "5",
-    "tagId": 1
+    "tag": "Estrelas"
   },
   {
-    "titulo": "Ilustração",
+    "titulo": "Nebulosa de Órion",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-6.png",
     "id": "6",
-    "tagId": 4
+    "tag": "Nebulosas"
   },
   {
-    "titulo": "Galáxia de Andrómeda",
+    "titulo": "Via Láctea",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-7.png",
     "id": "7",
-    "tagId": 2
+    "tag": "Galáxias"
   },
   {
-    "titulo": "Ilustração",
+    "titulo": "Nebulosa Carina",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-8.png",
     "id": "8",
-    "tagId": 4
+    "tag": "Nebulosas"
   },
   {
     "titulo": "Céu estrelado",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-9.png",
     "id": "9",
-    "tagId": 1
+    "tag": "Estrelas"
   },
   {
-    "titulo": "Ilustração",
+    "titulo": "Estrela Fomalhaut",
     "fonte": "Alura Space",
     "path": "/images/galeria/foto-10.png",
     "id": "10",
-    "tagId": 1
+    "tag": "Estrelas"
   }
 ]
