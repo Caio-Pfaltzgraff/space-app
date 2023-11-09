@@ -41,10 +41,10 @@ const Card = styled.figure`
 const Badger = styled.div`
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: ${props => props.$expandida ? '60px' : "10px"};
     background-color: rgba(153, 169, 203, 0.3);
     color: #FFF;
-    font-size: 18px;
+    font-size: ${props => props.$expandida ? '24px' : '18px'};
     padding: 8px 8px;
     border-radius: 8px;
 `;
@@ -56,7 +56,7 @@ const Imagem = ({ foto, expandida = false, aoZoomSolicitado, aoAlternarFavorito 
     return (
         <Card $expandida={expandida} id={`foto-${foto.id}`}>
             <img src={foto.path} alt={foto.titulo} />
-            <Badger>{foto.tag}</Badger>
+            <Badger $expandida={expandida}>{foto.tag}</Badger>
             <figcaption>
                 <h3>{foto.titulo}</h3>
                 <footer>
