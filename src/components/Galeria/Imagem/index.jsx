@@ -36,7 +36,10 @@ const Card = styled.figure`
     }
 `;
 
-const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
+const Imagem = ({ foto, expandida = false, aoZoomSolicitado, aoAlternarFavorito }) => {
+
+    const iconeFavorito = foto.favorita ? "/icons/favorito-ativo.png" : "/icons/favorito.png"
+
     return (
         <Card $expandida={expandida} id={`foto-${foto.id}`}>
             <img src={foto.path} alt={foto.titulo} />
@@ -44,7 +47,9 @@ const Imagem = ({ foto, expandida = false, aoZoomSolicitado }) => {
                 <h3>{foto.titulo}</h3>
                 <footer>
                     <h4>{foto.fonte}</h4>
-                    <IconButton><img src="/icons/favorito.png" alt="Icone de favorito" /></IconButton>
+                    <IconButton onClick={() => aoAlternarFavorito(foto)}>
+                        <img src={iconeFavorito} alt="Icone de favorito" />
+                    </IconButton>
                     {!expandida && <IconButton aria-hidden={expandida} onClick={() => aoZoomSolicitado(foto)}>
                         <img src="/icons/expandir.png" alt="Icone de expandir" />
                     </IconButton>}
