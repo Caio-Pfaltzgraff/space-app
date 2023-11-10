@@ -52,6 +52,16 @@ const App = () => {
     }))
   }
 
+  const aoSelecionarTag = (tag) => {
+    if(tag === 'Todas') {
+      return setFotosDaGaleria(fotos);
+    }
+    const fotosTag = fotos.filter(foto => {
+      return foto.tag === tag;
+    })
+    setFotosDaGaleria(fotosTag)
+  }
+
   return (
     <FundoGradiente>
       <GlobalStyles />
@@ -67,6 +77,7 @@ const App = () => {
             <Galeria 
               aoFotoSelecionada={foto => setFotoSelecionada(foto)} 
               aoAlternarFavorito={aoAlternarFavorito}
+              aoSelecionarTag={aoSelecionarTag}
               fotos={fotosDaGaleria}
             />
           </ConteudoGaleria>

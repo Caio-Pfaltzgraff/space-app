@@ -21,10 +21,10 @@ const ImageList = styled.ul`
     gap: 24px;
 `;
 
-const Galeria = ({ fotos = [], aoFotoSelecionada, aoAlternarFavorito }) => {
+const Galeria = ({ fotos = [], aoFotoSelecionada, aoAlternarFavorito, aoSelecionarTag }) => {
     return (
         <>
-            <Tags />
+            <Tags aoSelecionarTag={aoSelecionarTag}/>
             <GaleriaContainer>
                 <FluidSection>
                     <Title>Navegue pela galeria</Title>

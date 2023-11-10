@@ -35,13 +35,13 @@ const Tag = styled.button`
     }
 `;
 
-const Tags = () => {
+const Tags = ({ aoSelecionarTag }) => {
     return (
         <TagsContainer>
             <TagTitle>Busque por tags:</TagTitle>
             <Div>
                 {tags.map(tag => (
-                    <Tag key={tag.id}>{tag.titulo}</Tag>
+                    <Tag key={tag.id} onClick={() => aoSelecionarTag(`${tag.titulo}`)}>{tag.titulo}</Tag>
                 ))}
             </Div>
         </TagsContainer>
